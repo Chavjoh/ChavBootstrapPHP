@@ -1,0 +1,20 @@
+{
+  "name": "Chavjoh/ChavBootstrapPHP",
+  "description": "MVC Bootstrap with Smarty template system",
+  "minimum-stability": "alpha",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Johan Chavaillaz",
+      "email": "j.chavaillaz@gmail.com"
+    }
+  ],
+  "require": {
+    "smarty/smarty": "~3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "": "app/src/"
+    }
+  }
+}

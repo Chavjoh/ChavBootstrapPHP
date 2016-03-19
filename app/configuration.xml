@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<configuration>
+	<debug active="0"/>
+	<salt value="Dha!Y?kD7#a63qrRV*Bl"/>
+	<database>
+		<driver>mysql</driver>
+		<name>website</name>
+		<user>root</user>
+		<password>root</password>
+		<host>localhost</host>
+		<port>3306</port>
+		<prefix></prefix>
+	</database>
+	<default>
+		<pageName>Example Name</pageName>
+		<pageDescription>Example Description.</pageDescription>
+		<pageKeywords>example, keyword</pageKeywords>
+		<pageRobots>all</pageRobots>
+		<pageAuthor>Example Author</pageAuthor>
+	</default>
+</configuration>

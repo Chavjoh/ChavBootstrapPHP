@@ -1,0 +1,10 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+*.iml
+.idea/
+
+# Composer
+composer.phar
+/vendor/
+
+# Windows
+Thumbs.db
