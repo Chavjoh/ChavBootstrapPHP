@@ -103,14 +103,12 @@ class Kernel
 	private function dispatchToController($urlExplode)
 	{
 		// Get controller name
-		$this->page = $urlExplode[0] ?? 'Home';
+		$controllerName = array_shift($urlExplode);
+		$this->page = $controllerName ?? 'Home';
 		$controller = $this->page.'Controller';
 
-		// Delete the URL argument computed (class name)
-		array_shift($urlExplode);
-
 		// Add prefix for namespace
-		$controller = '\\Controller\\'.$controller;
+		$controller = '\Controller\\'.$controller;
 
 		try
 		{
@@ -125,7 +123,7 @@ class Kernel
 			$positionMethod = abs($controller::getMethodPosition($urlExplode));
 
 			// Get method name of controller
-			$method = isset($urlExplode[$positionMethod]) ? $urlExplode[$positionMethod] : '';
+			$method = $urlExplode[$positionMethod] ?? '';
 
 			// Check availability of the method called
 			if (!in_array($method, $controller::getMethodAvailable()))
