@@ -4,6 +4,32 @@ MVC Bootstrap with Smarty template system.
 ## Requirements
 
 * PHP 7+
+* Composer
+
+## How it works
+
+```
+http://www.example.com/product/section/4/.../...
+                          |       |    |  |   |
+                          |       |    ↓  ↓   ↓
+                          |       | Parameters (stored in the controller)
+                          |       | Can be accessed by $this->arguments[position]
+                          |       ↓
+                          |    Method -> ProductController::section()
+                          ↓
+                     Controller -> ProductController::__construct()
+```
+But wait ! There's more ! You can change the method position by overwriting `Controller::getMethodPosition()`. Here's an example for a forum (where `getMethodPosition` return 1 instead of 0):
+```
+                             Parameters
+                             ↑         ↑
+                             |         |
+http://www.example.com/forum/4/subject/2/
+                          |       ↓
+                          |    Method -> ProductController::section()
+                          ↓
+                     Controller -> ProductController::__construct()
+```
 
 ## How to use it
 
